@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import User from './models/User.interface';
 
 function App() {
+  const [users, setUsers] = useState<Array<User>>([])
+
+  useEffect(() => {
+    setUsers([{ name: 'toto' }])
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
